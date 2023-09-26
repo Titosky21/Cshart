@@ -1,0 +1,24 @@
+using System;
+
+namespace NumerosPares{
+    static void Main(string[] args){
+        int num = 0;
+
+        Console.WriteLine("Cuantos Números Pares Hay Antes");
+
+        Console.Write("Ingrese número : ");
+        num = Convert.ToInt32(Console.ReadLine());
+
+        if(num == 0){
+            Console.WriteLine("CASO ESPECIAL");
+        }else{
+            for(int i = 1 ; i <= num ; i++){
+                if(i % 2 == 0){
+                    Console.WriteLine(i + " es Par");
+                }else{
+                    Console.WriteLine(i + " No es Par");
+                }
+            }
+        }
+    }
+}

@@ -52,16 +52,21 @@ namespace POO_Complejos{
                 aux_1[1] = parImaganaria * entero;
 
                 int[] aux_2 = new int[2];
-                aux_2[0] = getValor() * complejo;
+                aux_2[0] = (getValor() * complejo) * -1;
                 aux_2[1] = (parImaganaria * complejo) * -1;
 
-                int real = aux_1[0] + aux_2[1]*-1;
+                int real = aux_1[0] + aux_2[1] *-1;
                 int imaginaria = aux_1[1] + aux_2[0];
 
-                int var = (entero * entero) - (complejo * complejo)*-1;
+                double var = (entero * entero) - (complejo * complejo)*-1;
+                if(var != 0){
+                    Console.WriteLine($"El resultado de Dividir [{getValor()} {parImaganaria}i] / [{entero} {complejo}i] es : [{(real/var):F3} {(imaginaria/var):F3}i]");
+                    Console.WriteLine($"El resultado de Dividir [{getValor()} {parImaganaria}i] / [{entero} {complejo}i] es : [{real}/{var} {imaginaria}i/{var}]");
+                }else{
+                    Console.WriteLine("No se puede realizar la divisió porque el denominador es [ 0 ]");
+                }
 
-                Console.WriteLine($"El resultado de Dividir [{getValor()} {parImaganaria}i] / [{entero} {complejo}i] es : [{real}/{var} {imaginaria}i/{var}]");
-
+                
         }
 
         //public override string ToString(){

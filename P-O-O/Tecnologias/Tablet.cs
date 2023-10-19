@@ -6,17 +6,18 @@ namespace POO_Abs_Tecnologia{
         //Atributos
         private int pulgadas;
         private int gb;
-        
+        private string marca;
 
         //Constructores
-        public Tablet(int pulgadas,int gb,string dueño,string modelo):base(dueño,modelo){
+        public Tablet(int pulgadas,int gb,string marca,string dueño,string modelo):base(dueño,modelo){
             this.pulgadas = pulgadas;
             this.gb = gb;
+            this.marca = marca;
         }
 
         //Métodos
         public void Caracteristicas(){
-            Console.WriteLine("\nLas caracteristicas del Tablet son : \nDueño: "+getDueño()+"\nModelo: "+getModelo()+"\nPulgadas: "+this.pulgadas+"\nAlmacenamiento: "+this.gb);
+            Console.WriteLine("\nLas caracteristicas del Tablet son : \nDueño: "+getDueño()+"\nMarca: "+this.marca+"\nModelo: "+getModelo()+"\nPulgadas: "+this.pulgadas+"\nAlmacenamiento: "+this.gb);
         }
 
 
